@@ -1,0 +1,15 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="486" Width="512" Closing="OnFormClosing">
+    <Grid>
+        <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="75" Click="btnConnect_Click"/>
+        <Button x:Name="btnDisconnect" Content="Disconnect" HorizontalAlignment="Left" Margin="90,42,0,0" VerticalAlignment="Top" Width="75" Click="btnDisconnect_Click"/>
+        <TextBlock x:Name="lbServerStatus" HorizontalAlignment="Left" Margin="10,21,0,0" TextWrapping="Wrap" Text="Server status: Offline" VerticalAlignment="Top" Foreground="Red"/>
+        <ListView x:Name="chatWindow" HorizontalAlignment="Left" Height="351" Margin="10,67,0,0" VerticalAlignment="Top" Width="484">
+            
+        </ListView>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="23" Margin="10,423,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397" TextChanged="txtMessage_TextChanged" KeyDown="txtMessage_KeyDown"/>
+        <Button x:Name="btnSendMessage" Content="Send" HorizontalAlignment="Left" Margin="419,425,0,0" VerticalAlignment="Top" Width="75" Click="btnSendMessage_Click"/>
+    </Grid>
+</Window>

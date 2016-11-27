@@ -1,0 +1,15 @@
+E:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\bin\Debug\ServerProtocol.dll
+E:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\bin\Debug\ServerProtocol.pdb
+E:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\obj\Debug\ServerProtocol.csprojResolveAssemblyReference.cache
+E:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\obj\Debug\ServerProtocol.dll
+E:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\obj\Debug\ServerProtocol.pdb
+G:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\bin\Debug\ServerProtocol.dll
+G:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\bin\Debug\ServerProtocol.pdb
+G:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\obj\Debug\ServerProtocol.csprojResolveAssemblyReference.cache
+G:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\obj\Debug\ServerProtocol.dll
+G:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\obj\Debug\ServerProtocol.pdb
+H:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\bin\Debug\ServerProtocol.dll
+H:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\bin\Debug\ServerProtocol.pdb
+H:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\obj\Debug\ServerProtocol.csprojResolveAssemblyReference.cache
+H:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\obj\Debug\ServerProtocol.dll
+H:\Programming\CSharp\Projects\Instant Messenger\ServerProtocol\obj\Debug\ServerProtocol.pdb
