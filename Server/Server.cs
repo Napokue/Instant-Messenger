@@ -49,7 +49,7 @@ namespace ServerApplication
                 _serverSocket.Listen(10);
                 var clientSocket = _serverSocket.Accept();
                 Console.WriteLine($"Connected: {clientSocket.RemoteEndPoint}");
-
+                BroadCast($"Connected: {clientSocket.RemoteEndPoint}");
                 // Queue the method and assign it to the first available thread
                 ThreadPool.QueueUserWorkItem(ClientMessages, clientSocket);
             }
@@ -77,8 +77,9 @@ namespace ServerApplication
             }
             if (!ServerInformation.IsSocketConnected(clientSocket))
             {
-                Console.WriteLine($"Disconnected {clientSocket.RemoteEndPoint}");
                 _clientList.Remove(clientSocket);
+                Console.WriteLine($"Disconnected: {clientSocket.RemoteEndPoint}");
+                BroadCast($"Disconnected: {clientSocket.RemoteEndPoint}");
             }
         }
 
@@ -104,6 +105,18 @@ namespace ServerApplication
         public void SendMessage(Socket socket, byte[] message)
         {
             socket.Send(message);
+        }
+
+        /// <summary>
+        /// Sends a message from the server to all clients
+        /// </summary>
+        /// <param name="message"></param>
+        private void BroadCast(string message)
+        {
+            foreach (var client in _clientList)
+            {
+                SendMessage(client, Encoding.ASCII.GetBytes(message));
+            }
         }
 
         public string ReturnReceivedMessage(Socket socket)
