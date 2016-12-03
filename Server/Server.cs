@@ -6,17 +6,17 @@ using System.Text;
 using System.Threading;
 using ServerProtocol;
 
-namespace Server
+namespace ServerApplication
 {
     class Server : IServer
     {
-        private readonly Socket serverSocket;
-        private readonly List<Socket> clientList;
+        private readonly Socket _serverSocket;
+        private readonly List<Socket> _clientList;
 
         public Server()
         {
-            serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            clientList = new List<Socket>();
+            _serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            _clientList = new List<Socket>();
         }
 
         /// <summary>
@@ -46,8 +46,8 @@ namespace Server
             while (true)
             {
                 // Program is suspended while waiting for an incoming connection
-                serverSocket.Listen(10);
-                var clientSocket = serverSocket.Accept();
+                _serverSocket.Listen(10);
+                var clientSocket = _serverSocket.Accept();
                 Console.WriteLine($"Connected: {clientSocket.RemoteEndPoint}");
 
                 // Queue the method and assign it to the first available thread
@@ -58,7 +58,7 @@ namespace Server
         public void ClientMessages(object obj)
         {
             var clientSocket = (Socket) obj;
-            clientList.Add(clientSocket);
+            _clientList.Add(clientSocket);
             
             while (ServerInformation.IsSocketConnected(clientSocket))
             {
@@ -70,7 +70,7 @@ namespace Server
                 Console.WriteLine($"{clientSocket.RemoteEndPoint}: {data}"); 
 
                 // "Forward" the sent message from client to the other clients
-                foreach (var client in clientList)
+                foreach (var client in _clientList)
                 {
                     SendMessage(client, Encoding.ASCII.GetBytes(clientSocket.RemoteEndPoint + ": " + data));
                 }
@@ -78,7 +78,7 @@ namespace Server
             if (!ServerInformation.IsSocketConnected(clientSocket))
             {
                 Console.WriteLine($"Disconnected {clientSocket.RemoteEndPoint}");
-                clientList.Remove(clientSocket);
+                _clientList.Remove(clientSocket);
             }
         }
 
@@ -86,7 +86,7 @@ namespace Server
         {
             try
             {
-                serverSocket.Bind(ServerInformation.ServerEndPoint);
+                _serverSocket.Bind(ServerInformation.ServerEndPoint);
                 Console.WriteLine("The socket has been successfully bound to the server its EndPoint.");
             }
             catch (Exception)
@@ -98,7 +98,7 @@ namespace Server
         public void CloseConnection()
         {
             Console.WriteLine("The server could not be started.");
-            serverSocket.Close();
+            _serverSocket.Close();
         }
 
         public void SendMessage(Socket socket, byte[] message)

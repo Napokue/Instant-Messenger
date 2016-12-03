@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mime;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace Client
+namespace ClientApplication
 {
-    public class Message
+    public static class Message
     {
         /// <summary>
         /// Create a ListViewItem with text and a color

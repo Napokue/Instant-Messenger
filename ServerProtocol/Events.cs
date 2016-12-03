@@ -3,9 +3,9 @@ namespace ServerProtocol
 {
     public class Events
     {
-        public delegate void dlgMessageNotify();
+        public delegate void DlgMessageNotify();
 
-        public static event dlgMessageNotify MessageNotify;
+        public static event DlgMessageNotify MessageNotify;
 
         private static void OnMessageNotify()
         {

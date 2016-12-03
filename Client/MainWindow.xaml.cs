@@ -8,18 +8,18 @@ using System.Windows.Input;
 using System.Windows.Media;
 using ServerProtocol;
 
-namespace Client
+namespace ClientApplication
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow
     {
-        private readonly Client client;
+        private readonly Client _client;
         public MainWindow()
         {
             InitializeComponent();
-            client = new Client(this);
+            _client = new Client(this);
 
             // Set the default server status on start
             UpdateServerStatus();
@@ -49,16 +49,9 @@ namespace Client
             }
         }
 
-        /* C# delegates are similar to pointers to functions, in C or C++.
-         * A delegate is a reference type variable that holds the reference to a method.
-         * The reference can be changed at runtime. Delegates are especially 
-         * used for implementing events and the call-back methods.
-         */
         private delegate void MessageCallBack(string data);
 
 
-        // I have to do some research about invoking.
-        // Invoke = aanroepen.
         private void AddMessageToChatWindow(string data)
         {
             var msg = Message.CreateMessage(data, new SolidColorBrush(Colors.Black));
@@ -67,7 +60,7 @@ namespace Client
 
         private void btnConnect_Click(object sender, RoutedEventArgs e)
         {
-            if (!client.SetupConnection()) return;
+            if (!_client.SetupConnection()) return;
 
             Thread t = new Thread(ClientMessages);
             t.SetApartmentState(ApartmentState.STA);
@@ -79,9 +72,9 @@ namespace Client
         {
             try
             {
-                while (ServerInformation.IsSocketConnected(client.clientSocket))
+                while (ServerInformation.IsSocketConnected(_client.ClientSocket))
                 {
-                    var data = client.ReturnReceivedMessage(client.clientSocket);
+                    var data = _client.ReturnReceivedMessage(_client.ClientSocket);
 
                     if (data.Length > 0)
                     {
@@ -99,7 +92,7 @@ namespace Client
         {
             if (Client.IsClientLoggedIn)
             {
-                client.CloseConnection();
+                _client.CloseConnection();
             }
         }
 
@@ -125,12 +118,12 @@ namespace Client
 
         private void btnDisconnect_Click(object sender, RoutedEventArgs e)
         {
-            client.CloseConnection();
+            _client.CloseConnection();
         }
 
         private void btnSendMessage_Click(object sender, RoutedEventArgs e)
         {
-            client.SendMessage(client.clientSocket, Encoding.ASCII.GetBytes(txtMessage.Text.Trim()));
+            _client.SendMessage(_client.ClientSocket, Encoding.ASCII.GetBytes(txtMessage.Text.Trim()));
             txtMessage.Text = "";
         }
     }

@@ -1,0 +1,8 @@
+D:\Projects\Instant-Messenger\Server\bin\Debug\ServerProtocol.dll
+D:\Projects\Instant-Messenger\Server\bin\Debug\ServerProtocol.pdb
+D:\Projects\Instant-Messenger\Server\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache
+D:\Projects\Instant-Messenger\Server\obj\Debug\ServerApplication.exe
+D:\Projects\Instant-Messenger\Server\obj\Debug\ServerApplication.pdb
+D:\Projects\Instant-Messenger\Server\bin\Debug\ServerApplication.exe.config
+D:\Projects\Instant-Messenger\Server\bin\Debug\ServerApplication.exe
+D:\Projects\Instant-Messenger\Server\bin\Debug\ServerApplication.pdb

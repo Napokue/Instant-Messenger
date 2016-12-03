@@ -17,3 +17,11 @@ H:\Programming\CSharp\Projects\Instant Messenger\Server\bin\Debug\Server.pdb
 H:\Programming\CSharp\Projects\Instant Messenger\Server\bin\Debug\ServerProtocol.dll
 H:\Programming\CSharp\Projects\Instant Messenger\Server\bin\Debug\ServerProtocol.pdb
 H:\Programming\CSharp\Projects\Instant Messenger\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\Projects\Instant-Messenger\Server\bin\Debug\Server.exe.config
+D:\Projects\Instant-Messenger\Server\bin\Debug\Server.exe
+D:\Projects\Instant-Messenger\Server\bin\Debug\Server.pdb
+D:\Projects\Instant-Messenger\Server\bin\Debug\ServerProtocol.dll
+D:\Projects\Instant-Messenger\Server\bin\Debug\ServerProtocol.pdb
+D:\Projects\Instant-Messenger\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\Projects\Instant-Messenger\Server\obj\Debug\Server.exe
+D:\Projects\Instant-Messenger\Server\obj\Debug\Server.pdb

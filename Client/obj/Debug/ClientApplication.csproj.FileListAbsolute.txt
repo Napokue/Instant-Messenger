@@ -1,0 +1,15 @@
+D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication.csprojResolveAssemblyReference.cache
+D:\Projects\Instant-Messenger\Client\obj\Debug\MainWindow.baml
+D:\Projects\Instant-Messenger\Client\obj\Debug\MainWindow.g.cs
+D:\Projects\Instant-Messenger\Client\obj\Debug\App.g.cs
+D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication.csproj.GenerateResource.Cache
+D:\Projects\Instant-Messenger\Client\bin\Debug\ServerProtocol.dll
+D:\Projects\Instant-Messenger\Client\bin\Debug\ServerProtocol.pdb
+D:\Projects\Instant-Messenger\Client\bin\Debug\ClientApplication.exe.config
+D:\Projects\Instant-Messenger\Client\bin\Debug\ClientApplication.exe
+D:\Projects\Instant-Messenger\Client\bin\Debug\ClientApplication.pdb
+D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication_MarkupCompile.cache
+D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication.g.resources
+D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication.Properties.Resources.resources
+D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication.exe
+D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication.pdb

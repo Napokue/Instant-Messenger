@@ -3,11 +3,11 @@ using System.Net.Sockets;
 using System.Text;
 using ServerProtocol;
 
-namespace Client
+namespace ClientApplication
 {
     class Client : IClient
     {
-        public Socket clientSocket { get; private set; }
+        public Socket ClientSocket { get; private set; }
         public static bool IsClientLoggedIn;
         private readonly MainWindow _mainScreen;
 
@@ -18,10 +18,10 @@ namespace Client
 
         public bool SetupConnection()
         {
-            clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try
             {
-                clientSocket.Connect(ServerInformation.ServerEndPoint);
+                ClientSocket.Connect(ServerInformation.ServerEndPoint);
 
                 // Sets the boolean to true
                 IsClientLoggedIn = IsLoggedIn();
@@ -37,10 +37,10 @@ namespace Client
 
         public void CloseConnection()
         {
-            if (clientSocket != null && clientSocket.Connected)
+            if (ClientSocket != null && ClientSocket.Connected)
             {
-                clientSocket.Shutdown(SocketShutdown.Both);
-                clientSocket.Close();
+                ClientSocket.Shutdown(SocketShutdown.Both);
+                ClientSocket.Close();
 
                 // Sets the boolean to false
                 IsClientLoggedIn = IsLoggedIn();

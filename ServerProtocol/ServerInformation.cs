@@ -13,12 +13,12 @@ namespace ServerProtocol
         /// <summary>
         /// The port of the server
         /// </summary>
-        public static int serverPort = 5000;
+        private const int ServerPort = 5000;
 
         /// <summary>
         /// EndPoint of the server (IP + port)
         /// </summary>
-        public static IPEndPoint ServerEndPoint = new IPEndPoint(ServerIpAddress, serverPort);
+        public static readonly IPEndPoint ServerEndPoint = new IPEndPoint(ServerIpAddress, ServerPort);
 
         /// <summary>
         /// Check if the socket is still connected to the server
