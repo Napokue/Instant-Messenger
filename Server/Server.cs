@@ -63,17 +63,11 @@ namespace ServerApplication
             while (ServerInformation.IsSocketConnected(clientSocket))
             {
                 var data = ReturnReceivedMessage(clientSocket);
-
                 if (data.Length <= 0) continue;
 
-                // Output the sent message from the client
-                Console.WriteLine($"{clientSocket.RemoteEndPoint}: {data}"); 
-
-                // "Forward" the sent message from client to the other clients
-                foreach (var client in _clientList)
-                {
-                    SendMessage(client, Encoding.ASCII.GetBytes(clientSocket.RemoteEndPoint + ": " + data));
-                }
+                var message = $"{clientSocket.RemoteEndPoint}: {data}";
+                Console.WriteLine(message); 
+                BroadCast(message);
             }
             if (!ServerInformation.IsSocketConnected(clientSocket))
             {
@@ -87,8 +81,8 @@ namespace ServerApplication
         {
             try
             {
-                _serverSocket.Bind(ServerInformation.ServerEndPoint);
                 Console.WriteLine("The socket has been successfully bound to the server its EndPoint.");
+                _serverSocket.Bind(ServerInformation.ServerEndPoint);
             }
             catch (Exception)
             {
