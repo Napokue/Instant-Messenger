@@ -24,9 +24,6 @@ namespace ServerApplication
         /// </summary>
         public void StartServer()
         {
-            Console.WriteLine("Starting the server...");
-            Console.WriteLine("Enter IP adress:");
-            ServerInformation.ServerIpAddress = IPAddress.Parse(Console.ReadLine());
             try
             {
                 SetupConnection();
@@ -118,7 +115,7 @@ namespace ServerApplication
             try
             {
                 // Data buffer for incoming data
-                var dataBuffer = new byte[1024];
+                var dataBuffer = new byte[socket.ReceiveBufferSize];
                 return Encoding.ASCII.GetString(dataBuffer, 0, socket.Receive(dataBuffer));
             }
             catch (Exception)
