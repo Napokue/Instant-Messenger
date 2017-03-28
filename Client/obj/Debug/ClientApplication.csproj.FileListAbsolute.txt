@@ -13,3 +13,5 @@ D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication.g.resources
 D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication.Properties.Resources.resources
 D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication.exe
 D:\Projects\Instant-Messenger\Client\obj\Debug\ClientApplication.pdb
+D:\Projects\Instant-Messenger\Client\bin\Debug\Ninject.dll
+D:\Projects\Instant-Messenger\Client\bin\Debug\Ninject.xml

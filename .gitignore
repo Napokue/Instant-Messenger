@@ -51,10 +51,9 @@ Temporary Items
 *.user
 _ReSharper.*/
 *.sdf
-*/**/bin/Debug
-*/**/bin/Release
-*/**/obj/Debug
-*/**/obj/Release;
+bin
+obj
+packages
 Server/obj/Debug/ServerApplication.exe
 Server/obj/Debug/ServerApplication.pdb
 *.cache
@@ -65,3 +64,4 @@ Server/bin/Debug/ServerApplication.exe
 Client/bin/Debug/ServerProtocol.pdb
 *.dll
 .vs/Instant Messenger/v14/.suo
+Client/bin/Debug/ClientApplication.exe

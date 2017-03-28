@@ -10,7 +10,7 @@ namespace ServerProtocol
         void CloseConnection();
 
         /// <summary>
-        /// Method to send a message to or from the server
+        /// Method to send a message to or from the server  
         /// </summary>
         /// <param name="socket">The socket you want to send your message with</param>
         /// <param name="message">The message you want to send</param>

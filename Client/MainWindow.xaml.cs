@@ -98,14 +98,7 @@ namespace ClientApplication
 
         private void txtMessage_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtMessage.Text.Trim().Length > 0)
-            {
-                btnSendMessage.IsEnabled = true;
-            }
-            else
-            {
-                btnSendMessage.IsEnabled = false;
-            }
+            btnSendMessage.IsEnabled = txtMessage.Text.Trim().Length > 0;
         }
 
         private void txtMessage_KeyDown(object sender, KeyEventArgs e)
@@ -124,7 +117,7 @@ namespace ClientApplication
         private void btnSendMessage_Click(object sender, RoutedEventArgs e)
         {
             _client.SendMessage(_client.ClientSocket, Encoding.ASCII.GetBytes(txtMessage.Text.Trim()));
-            txtMessage.Text = "";
+            txtMessage.Text = string.Empty;
         }
     }
 }

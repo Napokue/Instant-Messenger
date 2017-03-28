@@ -18,3 +18,5 @@ D:\Projects\Instant-Messenger\ServerProtocol\bin\Debug\ServerProtocol.pdb
 D:\Projects\Instant-Messenger\ServerProtocol\obj\Debug\ServerProtocol.csprojResolveAssemblyReference.cache
 D:\Projects\Instant-Messenger\ServerProtocol\obj\Debug\ServerProtocol.dll
 D:\Projects\Instant-Messenger\ServerProtocol\obj\Debug\ServerProtocol.pdb
+D:\Projects\Instant-Messenger\ServerProtocol\bin\Debug\Ninject.dll
+D:\Projects\Instant-Messenger\ServerProtocol\bin\Debug\Ninject.xml
